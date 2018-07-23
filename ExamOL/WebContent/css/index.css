@@ -1,0 +1,119 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	background: url(../img/index.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+.index-content {
+	width: 400px;
+	height: 450px;
+	/*background-color: white;*/
+	margin-left: 17%;
+	margin-top: 7%;
+	opacity: 0.7;
+}
+.title {
+	height: 130px;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+h1,h2 {
+	font-family: "楷体";
+}
+h1 {
+	font-size: 48px;
+	color: aqua;
+}
+h2 {
+	font-size: 36px;
+	color: wheat;
+}
+.login-form {
+	width: 100%;
+	height: 320px;
+	background: blueviolet;
+	margin-top: 0;
+	overflow: hidden;
+}
+nav {
+	text-align: center;
+	width: 100%;
+	background: white;
+	height: 40px;
+}
+nav div {
+	font-size: large;
+	float: left;
+	text-align: center;
+	width: 50%;
+	height: 30px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+/*nav div:hover {
+	border-bottom: solid;
+}*/
+.form-container {
+	width: 200%;
+	height: 280px;
+	text-align: center;
+	overflow: hidden;
+}
+.form-container div {
+	width: 50%;
+	height: 70%;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+form {
+	margin-top: 10%;
+	width: 100%;
+	height: 80%;
+	text-align: center;
+}
+table {
+	width: 80%;
+	height: 70%;
+	margin:auto;
+	text-align: center;
+}
+tr {
+	width: 80%;
+	height: 50%;
+	margin: 0;
+	text-align: center;
+}
+td {
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 22px;
+	font-family: "楷体";
+}
+input {
+	width: 100%;
+	height: 25px;
+	font-size: 20px;
+}
+button {
+	width: 90px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	/*color: white;*/
+	background-color: aqua;
+	cursor: pointer;
+}
+button:hover {
+	background-color: red;
+}

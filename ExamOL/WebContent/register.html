@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>c语言助教平台注册页面</title>
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/register.js"></script>
+		<link rel="stylesheet" href="css/register.css"/>
+	</head>
+	<body>
+		<div class="zhuce">
+			<div class="title"><h2>注册页面</h2></div>
+			<div class="register-container">
+				<form method="post" id="form-register">
+					<table>
+						<tr>
+							<td><b>姓名</b></td>
+							<td><input type="text" id="regname" required/></td>
+						</tr>
+						<tr>
+							<td><b>学号</b></td>
+							<td><input type="text" id="regnum" placeholder="学号" required="required"/></td>
+						</tr>
+						<tr>
+							<td><b>班级</b></td>
+							<td>
+								<select class="banji">
+									<option value="电信1701">电信1701</option>
+									<option value="电信1702">电信1702</option>
+									<option value="电信1703">电信1703</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><b>密码</b></td>
+							<td><input type="password" id="regpwd" required/></td>
+						</tr>
+					</table>
+				</form>
+				<button id="register">学生注册</button>
+			</div>
+		</div>
+	</body>
+</html>

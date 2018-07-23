@@ -1,0 +1,109 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.container {
+	width: 60%;
+	height: 100%;
+	float: right;
+	position: relative;
+	overflow: hidden;
+}
+.code {
+	width: 100%;
+	height: 100%;
+	float: right;
+	position: relative;
+	/*background: blue;*/
+}
+.editor {
+	width: 100%;
+	height: 80%;
+	overflow: hidden;
+	position: relative;
+	/*background: yellow;*/
+}
+.console {
+	width: 100%;
+	height: 20%;
+	overflow: hidden;
+	background: black;
+}
+.menubar {
+	width: 100%;
+	height: 15%;
+	overflow: hidden;
+	background-color: chocolate;
+}
+.codearea {
+	width: 100%;
+	height: 80%;
+	overflow: scroll;
+	font-size: 18px;
+}
+.output_title {
+	width: 100%;
+	height: 5%;
+	background-color: brown;
+}
+.output {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	position: relative;
+	color: white;
+	/*background: palegreen;*/
+}
+/*.run {
+	width: 50%;
+	height: 100%;
+	overflow: scroll;
+	float: left;
+	position: relative;
+}*/
+.menu div {
+	width: 25%;
+	height:80% ;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+.codetype,.theme {
+	margin-top: 10%;
+	width: 70%;
+	height: 70%;
+	font-size: 18px;
+	color: black;
+	border-radius: 5px;
+	background-color: bisque;
+}
+
+.wordsize{
+	margin-top: 10%;
+	width: 50%;
+	height: 50%;
+	font-size: 18px;
+	color: black;
+	border-radius: 5px;
+	background-color: bisque;
+	/*background-color: black;*/
+}
+.upload {
+	width: 40%;
+	height: 70%;
+	margin-top: 10%;
+	font-size: 18px;
+	color: white;
+	background-color: aquamarine;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 7px;
+	text-align: center;
+}
+.upload:hover {
+	background-color: red;
+}
+
+

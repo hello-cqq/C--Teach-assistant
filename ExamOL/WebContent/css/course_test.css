@@ -1,0 +1,41 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.test{
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	background-color: aqua;
+	overflow: hidden;
+	text-align:center;
+}
+.test_form {
+	width:50%;
+	height:100%;
+	background-color:red;
+	float:left;
+	position:relative;
+	text-align:center;
+}
+.pro_base {
+	width:50%;
+	height:100%;
+	overflow:scroll;
+	background-color:blue;
+	float:left;
+	position:relative;
+	text-align:center;
+}
+
+td {
+	text-align:center;
+	height:20px;
+}
+button {
+	cursor:pointer;
+}
+
+

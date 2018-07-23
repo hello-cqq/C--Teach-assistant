@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>编程题</title>
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/codeedit.css" />
+		<!--codemirror核心库-->
+		<link rel="stylesheet" href="codemirror-5.39.0/lib/codemirror.css" />
+		<script src="codemirror-5.39.0/lib/codemirror.js"></script>
+		<!--c语言代码高亮-->
+		<script src="codemirror-5.39.0/mode/clike/clike.js"></script>
+		<!--编辑器主题-->
+		<link rel="stylesheet" href="codemirror-5.39.0/theme/dracula.css" />
+		<link rel="stylesheet" href="codemirror-5.39.0/theme/seti.css">
+		<link rel="stylesheet" href="codemirror-5.39.0/theme/tomorrow-night-bright.css">
+		<link rel="stylesheet" href="codemirror-5.39.0/theme/eclipse.css">
+		<!--支持代码折叠-->
+		<link rel="stylesheet" href="codemirror-5.39.0/addon/fold/foldgutter.css"/>
+		<script src="codemirror-5.39.0/addon/fold/foldcode.js"></script>
+		<script src="codemirror-5.39.0/addon/fold/foldgutter.js"></script>
+		<script src="codemirror-5.39.0/addon/fold/brace-fold.js"></script>
+		<script src="codemirror-5.39.0/addon/fold/comment-fold.js"></script>
+		
+		<script src="codemirror-5.39.0/addon/fold/markdown-fold.js"></script>
+		<script src="codemirror-5.39.0/addon/selection/active-line.js"></script>
+		<!--支持自动提示和补全-->
+		<link rel="stylesheet" href="codemirror-5.39.0/addon/hint/show-hint.css"/>
+		<script src="codemirror-5.39.0/addon/hint/show-hint.js"></script>
+		<script src="codemirror-5.39.0/addon/hint/anyword-hint.js"></script>
+		<!--括号匹配-->
+		<script src="codemirror-5.39.0/addon/edit/matchbrackets.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="code">
+				<div class="editor">
+					<div class="menubar">
+						<nav style="width: 100%;height: 100%;text-align: center;" class="menu">
+							<div>
+								<select class="codetype" onchange="codeTypeSet(this.options[this.options.selectedIndex].value)">
+									<option value="x-csrc">C</option>
+									<option value="x-c++src">C++</option>
+									<option value="x-java">Java</option>
+								</select>
+							</div>
+							<div>
+								<select class="theme" onchange="themeSet(this.options[this.options.selectedIndex].value)">
+									<option value="dracula">dracula</option>
+									<option value="eclipse">eclipse</option>
+									<option value="seti">seti</option>
+									<option value="tomorrow-night-bright">tomorrow-night-bright</option>
+								</select>
+							</div>
+							<div><input type="number" class="wordsize" min=12 max=24 value="18" onchange="fontSizeSet(this.value)"/></div>
+							<div><button class="upload"><b>提交</b></button></div>
+						</nav>
+					</div>
+					<div class="codearea" id="codearea">
+						<textarea class="write" id="code" name="code" ></textarea>
+					</div>
+					<div class="output_title">
+						<h3 style="margin: 0;color: white;float:left">运行结果</h3>
+						<img id="handleImg" src="img/HandleIn.png"style="float:left;position: relative;margin-left: 30%;" onclick="shensuo()"/>
+					</div>
+				</div>
+				<div class="console" id="console">
+					
+					<div class="output"></div>
+					<!--<div class="run"></div>-->
+				</div>
+				
+			</div>
+		</div>
+		<script>
+			var codeTypeValue="x-csrc",themeValue="dracula",fontSizeValue;
+			var myTextarea = document.getElementById('code');
+			var edit_div=document.getElementById("codearea");
+			var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				mode: "text/"+codeTypeValue, //实现Java代码高亮
+				lineNumbers: true,	//显示行号
+				theme: themeValue,	//设置主题
+				lineWrapping: true,	//代码折叠
+				foldGutter: true,
+				matchBrackets:true,
+        		styleActiveLine:true,
+        		smartIndent: true,
+				gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+				extraKeys:{"Ctrl-Space":"autocomplete"},
+				matchBrackets: true	//括号匹配
+			});
+			editor.setSize('200%', '100%');
+			editor.setValue("#include <stdio.h>\n\n"+"int main(){\n\n\treturn 0;\n}");
+			function codeTypeSet (s)
+			{
+				codeTypeValue=s;
+				codemirror();
+				switch(s){
+					case "x-java":
+					editor.setValue("//java编辑器\npublic class XXX\n{\n\tpublic static void main(String[] args){\n\n\t}\n}");
+					break;
+					case "x-csrc":
+					editor.setValue("//C语言编辑器\n#include <stdio.h>\n\n"+"int main(){\n\n\treturn 0;\n}");
+					break;
+					case "x-c++src":
+					editor.setValue("//C++编辑器\n#include<iostream>\n\n"+"int main(){\n\n\treturn 0;\n}");
+				}
+			}
+			function themeSet (s)
+			{
+				themeValue=s;
+				codemirror();
+			}
+			function fontSizeSet (s)
+			{
+				fontSizeValue=s;
+				edit_div.style.fontSize=fontSizeValue+"px";
+			}
+			function codemirror()
+			{
+				editor.setOption("mode","text/"+codeTypeValue);
+				editor.setOption("theme",themeValue);
+			}
+			
+		</script>
+	</body>
+</html>

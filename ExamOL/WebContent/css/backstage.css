@@ -1,0 +1,52 @@
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.back_page {
+	width: 60%;
+	height: 100%;
+	margin: auto;
+	position: relative;
+	background-color: aqua;
+	overflow: hidden;
+}
+.caidan {
+	width: 20%;
+	height: 440px;
+	float: left;
+	position: relative;
+	background-color: white;
+}
+ul{
+	width: 100%;
+	padding-left: 0;
+	margin-top: 0;
+}
+li {
+	list-style-type: none;
+	text-align: center;
+	width: 100%;
+	height: 40px;
+	background-color: lightseagreen;
+	padding-top: 15px;
+	margin-top: 1px;
+}
+li:hover {
+	cursor: pointer;
+	background-color: blueviolet;
+}
+.back_content {
+	width: 70%;
+	height: 448px;
+	float: left;
+	position: relative;
+	background-color: white;
+	overflow: hidden;
+}
+.back_content div {
+	width: 100%;
+	height: 100%;
+	/*background-color: blue;*/
+}

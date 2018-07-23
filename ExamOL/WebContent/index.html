@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>华中科技大学c语言助教平台</title>
+		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="index-content">
+			<div class="title">
+				<h1>华中科技大学</h1>
+				<h2>C语言助教平台</h2>
+			</div>
+			<div class="login-form">
+				<nav>
+					<div class="login-nav" id="student">学生</div>
+					<div class="login-nav" id="teacher">管理员</div>
+				</nav>
+				<div class="form-container">
+					<div>
+						<form method="post" id="form-student">
+							<table>
+								<tr>
+									<td><b>学号</b></td>
+									<td><input type="text" id="student-num"/></td>
+								</tr>
+								<tr>
+									<td><b>密码</b></td>
+									<td><input type="password" id="student-pwd"/></td>
+								</tr>
+							</table>
+						</form>
+						<button id="student-login">学生登录</button>
+						<a href="register.html" style="margin-right: -10px;" target="_blank">没有账号？去注册</a>
+					</div>
+					<div>
+						<form method="post" id="form-teacher">
+							<table>
+								<tr>
+									<td><b>账号</b></td>
+									<td><input type="text" id="teacher-num"/></td>
+								</tr>
+								<tr>
+									<td><b>密码</b></td>
+									<td><input type="password" id="teacher-pwd"/></td>
+								</tr>
+							</table>
+						</form>
+						<button id="teacher-login">教师登录</button>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
